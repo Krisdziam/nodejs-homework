@@ -7,8 +7,8 @@ const {
   addContactController,
   updateContactController,
   updateStatusContactController,
-} = require("../../controllers/contactsControllers");
-const { asyncWrapper } = require("../../helpers/apiHelpers");
+} = require("../controllers/contactsControllers");
+const { asyncWrapper } = require("../helpers/apiHelpers");
 
 router.get("/", asyncWrapper(getContactsController));
 
