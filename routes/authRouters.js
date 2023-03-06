@@ -7,7 +7,7 @@ const router = express.Router();
 
 const { asyncWrapper } = require("../helpers/apiHelpers");
 
-router.get("/registration", asyncWrapper(registationController));
+router.get("/registration", registationController);
 
 router.get("/login", asyncWrapper(loginController));
 
