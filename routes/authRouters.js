@@ -1,14 +1,14 @@
 const express = require("express");
-const router = express.Router();
 const {
+  registationController,
+  loginController,
+} = require("../controllers/authController");
+const router = express.Router();
 
-} = require("../controllers/contactsControllers");
 const { asyncWrapper } = require("../helpers/apiHelpers");
 
-router.get("/", asyncWrapper(getContactsController));
+router.get("/registration", asyncWrapper(registationController));
 
-router.get("/:id", asyncWrapper(getContactByIdController));
-
-
+router.get("/login", asyncWrapper(loginController));
 
 module.exports = router;
